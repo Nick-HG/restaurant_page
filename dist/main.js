@@ -1,1 +1,1 @@
-console.log("testing, testing, 1, 2, 3");
+(()=>{"use strict";console.log("testing, testing, 1, 2, 3"),function(){const e=document.getElementById("content"),t=document.createElement("h1"),n=document.createElement("img"),o=document.createElement("p");t.textContent="Nick's bakery",function(e,t){for(let n in t)e.setAttribute(n,t[n])}(n,{src:"../src/images/bakery.jpg",height:"500px"}),o.textContent="Welcome to Nick's bakery. Come get your carb fix and try some of our\n  delicious baked goods.",e.append(t,n,o)}()})();
