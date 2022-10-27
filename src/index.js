@@ -1,4 +1,5 @@
 import loadHome from "./home";
+import loadMenu from "./menu";
 
 
 function createHeader() {
@@ -35,16 +36,18 @@ function createNav() {
     loadMenu();
   });
 
-  const contactBtn = document.createElement('button');
-  contactBtn.classList.add('nav-button');
-  contactBtn.textContent = 'Contact';
-  contactBtn.addEventListener('click', (e) => {
-    if(e.target.classList.contains('active')) return;
-    setActiveButton(contactBtn);
-    loadContact();
-  });
+  // const contactBtn = document.createElement('button');
+  // contactBtn.classList.add('nav-button');
+  // contactBtn.textContent = 'Contact';
+  // contactBtn.addEventListener('click', (e) => {
+  //   if(e.target.classList.contains('active')) return;
+  //   setActiveButton(contactBtn);
+  //   loadContact();
+  // });
 
-  nav.append(homeBtn, menuBtn, contactBtn);
+  nav.appendChild(homeBtn);
+  nav.appendChild(menuBtn);
+  // nav.appendChild(contactBtn);
   return nav;
 }
 
@@ -71,6 +74,8 @@ function init() {
 
   content.appendChild(createHeader());
   content.appendChild(createMain());
+
+  setActiveButton(document.querySelector('.nav-button'));
   loadHome();
 }
 
