@@ -1,5 +1,6 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
+import loadContact from "./contact";
 
 
 function createHeader() {
@@ -36,20 +37,21 @@ function createNav() {
     loadMenu();
   });
 
-  // const contactBtn = document.createElement('button');
-  // contactBtn.classList.add('nav-button');
-  // contactBtn.textContent = 'Contact';
-  // contactBtn.addEventListener('click', (e) => {
-  //   if(e.target.classList.contains('active')) return;
-  //   setActiveButton(contactBtn);
-  //   loadContact();
-  // });
+  const contactBtn = document.createElement('button');
+  contactBtn.classList.add('nav-button');
+  contactBtn.textContent = 'Contact';
+  contactBtn.addEventListener('click', (e) => {
+    if(e.target.classList.contains('active')) return;
+    setActiveButton(contactBtn);
+    loadContact();
+  });
 
   nav.appendChild(homeBtn);
   nav.appendChild(menuBtn);
-  // nav.appendChild(contactBtn);
+  nav.appendChild(contactBtn);
   return nav;
 }
+
 
 function setActiveButton(button) {
   const buttons = document.querySelectorAll('.nav-button');
@@ -61,6 +63,7 @@ function setActiveButton(button) {
   button.classList.add('active');
 }
 
+
 function createMain() {
   const main = document.createElement('main');
   main.classList.add('main');
@@ -71,12 +74,12 @@ function createMain() {
 
 function init() {
   const content = document.getElementById('content');
-
   content.appendChild(createHeader());
   content.appendChild(createMain());
 
   setActiveButton(document.querySelector('.nav-button'));
   loadHome();
 }
+
 
 init();
