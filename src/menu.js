@@ -5,10 +5,27 @@ function createMenu() {
   menu.appendChild(
     createDish(
       "Ramen",
-      "Pork slices, bone broth, half-boiled egg, spring onion, udon noodles, bean sprouts"
+      "A hearty broth from Japan which is sure to satisfy",
      )
-    );
-
+  );
+  menu.appendChild(
+    createDish(
+      "Roast-Dinner",
+      "A British classic, roast beef, roast potatoes, vegetables and a good helpful of gravy"
+    )
+  );
+  menu.appendChild(
+    createDish(
+      "Borscht",
+      "Beet and cabbage borscht, a staple soup in many Eastern European homes"
+    )
+  );
+  menu.appendChild(
+    createDish(
+      "Congee",
+      "A creamy rice porridge from China that is eaten across Asia for breakfast"
+    )
+  );
 
   return menu;
 }
@@ -25,12 +42,11 @@ function createDish(name, description) {
   dishInfo.textContent = description;
 
   const dishImg = document.createElement('img');
-  dishImg.src = `../src/images/${name.toLowerCase()}.jpg`;
+  dishImg.src = `../src/images/${name}.jpg`;
 
   dish.appendChild(dishName);
   dish.appendChild(dishInfo);
   dish.appendChild(dishImg);
-  // dish.append(dishName, dishInfo, dishImg);
   return dish;
 }
 

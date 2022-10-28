@@ -1,6 +1,7 @@
 :root {
   --main-color: rgb(197, 191, 2);
   --background-light: rgba(0, 0, 0, 0.6);
+  --background-light-hover: rgba(99, 99, 99, 0.6);
   --background-dark: rgba(0, 0, 0, 0.9);
   --border-color: #222;
 }
@@ -20,7 +21,7 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(4px);
 }
 
 .content {
@@ -89,7 +90,7 @@ body {
 
 /* Main */
 .main {
-  max-width: 700px;
+  max-width: 800px;
   padding: 4rem;
   margin: 6rem 0;
   font-size: 2rem;
@@ -113,3 +114,40 @@ body {
   font-weight: bold;
   color: var(--main-color);
 }
+
+/* Menu */
+.menu {
+  display: grid;
+  grid-template-columns: repeat((2, 1fr));
+  grid-gap: 4rem;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color ease-in-out 0.2s;
+}
+
+.dish:hover {
+  background-color: var(--background-light-hover);
+}
+
+.dish h3 {
+  font-size: 28px;
+}
+
+.dish p {
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.dish img {
+  width: 400px;
+}
+
+
