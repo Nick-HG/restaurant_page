@@ -1,3 +1,10 @@
+:root {
+  --main-color: rgb(197, 191, 2);
+  --background-light: rgba(0, 0, 0, 0.6);
+  --background-dark: rgba(0, 0, 0, 0.9);
+  --border-color: #222;
+}
+
 *,
 *::before,
 *::after {
@@ -7,17 +14,102 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #fff;
-  background-color: black;
-  /* background-image: url('images/warm-food.jpg');
+  font-family: 'Raleway', sans-serif;
+  color: var(--main-color);
+  background-image: url('images/background-image.jpg');
   background-attachment: fixed;
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; */
+  backdrop-filter: blur(3px);
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
 
-h1 {
-  font-family: 'Courier New', Courier, monospace;
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--background-dark);
+}
+
+.title {
+  font-size: 48px;
+  padding-top: 1.5rem;
+}
+
+.nav-button {
+  border-style: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--main-color);
+  background-color: transparent;
+
+  margin: 1.5rem;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.nav-button:hover {
+  filter: brightness(100%);
+}
+
+/* Nav link hover effect */
+.nav-button,
+.nav-button:after,
+.nav-button:before {
+    transition: all .5s;
+}
+
+.nav-button:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: var(--main-color);
+  height: 2px;
+}
+
+.nav-button:hover:after {
+  width: 100%;
+}
+
+/* Main */
+.main {
+  max-width: 700px;
+  padding: 4rem;
+  margin: 6rem 0;
+  font-size: 2rem;
+  background-color: var(--background-light);
+  border: 1px solid var(--border-color);
+}
+
+/* Homepage */
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 325px;
+  width: 618px;
+}
+
+.home p {
+  margin: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--main-color);
 }

@@ -4,8 +4,8 @@
   home.classList.add('home');
 
   home.appendChild(createParagraph('For those foods that take you back to simpler times'));
-  home.appendChild(createParagraph(`From the winter warmers to the summer coolers, 
-  ome try our range of dishes from around the world`));
+  home.appendChild(createParagraph(`From the winter warmers to the summer coolers`)); 
+  home.appendChild(createParagraph(`Come try our range of dishes from around the world`));
 
   return home;
 }
