@@ -32,6 +32,8 @@ body {
   height: 100vh;
 }
 
+
+/* Heading */
 .header {
   display: flex;
   flex-direction: column;
@@ -43,7 +45,7 @@ body {
 }
 
 .title {
-  font-size: 48px;
+  font-size: 60px;
   padding-top: 1.5rem;
 }
 
@@ -88,6 +90,7 @@ body {
   width: 100%;
 }
 
+
 /* Main */
 .main {
   max-width: 800px;
@@ -98,13 +101,25 @@ body {
   border: 1px solid var(--border-color);
 }
 
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--background-dark);
+}
+
+
 /* Homepage */
 .home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 325px;
+  height: 425px;
   width: 618px;
 }
 
@@ -114,6 +129,7 @@ body {
   font-weight: bold;
   color: var(--main-color);
 }
+
 
 /* Menu */
 .menu {

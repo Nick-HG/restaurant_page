@@ -72,11 +72,23 @@ function createMain() {
   return main;
 }
 
+function createFooter() {
+  const footer = document.createElement('footer');
+  footer.classList.add('footer');
+
+  const copyright = document.createElement("p");
+  copyright.textContent = `Copyright © ${new Date().getFullYear()} Nick Herring`;
+
+  footer.appendChild(copyright);
+  return footer
+}
+
 
 function init() {
   const content = document.getElementById('content');
   content.appendChild(createHeader());
   content.appendChild(createMain());
+  content.appendChild(createFooter());
 
   setActiveButton(document.querySelector('.nav-button'));
   loadHome();
