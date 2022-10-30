@@ -10,7 +10,7 @@ function createContact() {
   contactNumber.textContent = '01234 567 899';
 
   const address = document.createElement('p');
-  address.textContent = 'Dependent on the dish';
+  address.textContent = '4 Privet Drive, Little Whinging, Surrey';
 
   contact.appendChild(title);
   contact.appendChild(contactNumber);

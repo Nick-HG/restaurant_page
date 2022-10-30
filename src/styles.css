@@ -68,7 +68,7 @@ body {
 .nav-button,
 .nav-button:after,
 .nav-button:before {
-    transition: all .5s;
+    transition: all .4s;
 }
 
 .nav-button:after {
@@ -150,4 +150,23 @@ body {
   width: 400px;
 }
 
+
+/* Contact */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 325px;
+  width: 618px;
+}
+
+.contact h1 {
+  text-decoration: underline solid 3px;
+}
+
+
+.contact p {
+  font-weight: bold;
+}
 
