@@ -42,7 +42,7 @@ function createDish(name, description) {
   dishInfo.textContent = description;
 
   const dishImg = document.createElement('img');
-  dishImg.src = `../src/images/${name}.jpg`;
+  dishImg.src = `../src/images/${name.toLowerCase()}.jpg`;
 
   dish.appendChild(dishName);
   dish.appendChild(dishInfo);
